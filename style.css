@@ -121,6 +121,7 @@ body::-webkit-scrollbar {
     font-size: 1.125rem;
 }
 
+/* -------- Desktop Nav (default) -------- */
 .nav-pill {
     display: flex;
     align-items: center;
@@ -142,53 +143,12 @@ body::-webkit-scrollbar {
     transform: translateX(-50%) scale(1);
 }
 
-/* Hide nav pills on small screens */
-@media (max-width: 768px) {
-    .nav-pill {
-        display: none; /* hide by default */
-        position: absolute;
-        top: 60px; /* adjust as needed below header */
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: var(--color-white);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        padding: 1rem;
-        gap: 1rem;
-        z-index: 999;
-    }
-
-    .nav-pill.active {
-        display: flex; /* show when active */
-    }
-
-    .nav-link {
-        text-align: center;
-        font-size: 1.2rem;
-        padding: 0.5rem 0;
-    }
-
-    /* Show hamburger button */
-    .menu-button {
-        display: block;
-    }
-}
-
-
-@media (min-width: 768px) {
-    .nav-pill {
-        display: flex;
-    }
-}
-
 .nav-link {
     font-family: 'VT323', monospace;
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--color-gray);
     text-decoration: none;
-    position: relative;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
@@ -209,12 +169,13 @@ body::-webkit-scrollbar {
     color: var(--color-primary-text);
 }
 
+/* -------- Hamburger Menu -------- */
 .menu-button {
-    position: absolute;
+    position: fixed;
     right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
+    top: 2.8rem;
+    transform: none;
+    display: none; /* hidden by default, shown on mobile */
     padding: 0.5rem;
     border-radius: 9999px;
     background-color: var(--color-button-bg);
@@ -222,56 +183,50 @@ body::-webkit-scrollbar {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border: none;
     transition: transform 200ms ease-in-out;
+    z-index: 1100;
 }
+
 .menu-button:hover {
-    transform: translateY(-50%) scale(1.1);
-}
-@media (min-width: 768px) {
-    .menu-button {
-        display: none;
-    }
-}
-
-.social-links {
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-@media (min-width: 768px) {
-    .social-links {
-        right: 3rem;
-    }
-}
-@media (max-width: 767px) {
-    .social-links {
-        display: none;
-    }
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: var(--color-button-bg);
-    border: 1px solid var(--color-border);
-    transition: transform 200ms ease-in-out, background-color 200ms ease-in-out;
-}
-.social-link:hover {
-    background-color: var(--color-bg-grid);
     transform: scale(1.1);
 }
 
-.social-link svg {
-    width: 2rem;
-    height: 2rem;
-    fill: var(--color-secondary-text);
+.menu-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-primary-text); /* ensures icon is visible */
+}
+
+/* -------- Mobile Styles -------- */
+@media (max-width: 768px) {
+    .nav-pill {
+        display: none; /* hidden by default */
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--color-white);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 1rem;
+        gap: 1rem;
+        z-index: 1000;
+        width: 90%; /* optional: make it fit mobile screen nicely */
+    }
+
+    .nav-pill.active {
+        display: flex;
+    }
+
+    .nav-link {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .menu-button {
+        display: block; /* show hamburger menu on mobile */
+    }
 }
 
 /* ===================
