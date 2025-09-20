@@ -277,12 +277,6 @@ body::-webkit-scrollbar {
 .profile-container:hover {
     transform: scale(1.03);
 }
-
-@media (min-width: 1024px) {
-    .profile-container {
-        margin-left: -6rem;
-    }
-}
 @media (min-width: 768px) {
     .profile-photo {
         width: 33rem;
@@ -1482,3 +1476,4 @@ body::-webkit-scrollbar {
     }
 
 }
+
