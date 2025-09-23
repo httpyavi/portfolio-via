@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
@@ -28,67 +29,93 @@
         <a href="https://your-resume-link.com" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
       <button id="menu-button" class="menu-button">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                d="M4 6h16M4 12h16m-7 6h7" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </header>
 
     <!-- MAIN CONTENT - HERO SECTION -->
-    <main class="main-content" id="home">
-      <div class="profile-container">
-        <img src="Resources/Via Memoji.png" alt="Profile" class="profile-photo">
-      </div>
-      <div class="text-container">
-        <h3 class="greeting-text">Hi there! I'm</h3>
-        <h1 class="name-text">Via Celis</h1>
-        <div class="role-pill">
-          <span id="role-text">I am</span>&nbsp;<span id="role" class="flip"></span>
-        </div>
+    <main class="hero-section">
+      <div class="hero-collage-container">
+          <h1 class="hero-background-text">
+              I'M A UI/UX DESIGNER
+          </h1>
+          
+          <div class="hero-image-frame">
+              <img src="Resources/Via.png" alt="Via Celis" class="hero-main-image">
+          </div>
+
+          <div class="collage-card ui collage-ui-pos">
+              <span class="font-bold text-sm md:text-base">USER<br>INTERFACE<br>DESIGN</span>
+          </div>
+          <div class="collage-card interaction collage-interaction-pos">
+              <span class="font-bold text-sm md:text-base">INTERACTION &<br>MOTION DESIGN</span>
+          </div>
+          <div class="collage-card ux collage-ux-pos">
+              <div class="collage-ux-content">
+                  <span class="text-xs font-bold mt-1">USER<br>EXPERIENCE</span>
+              </div>
+          </div>
+          <div class="collage-card name collage-name-pos">
+              <span class="collage-name-text">Via<br>Celis</span>
+          </div>
+
+          <div class="collage-image-card collage-image-1-pos">
+              <img src="Resources/sticker1.png" alt="Collage Image 1">
+          </div>
+          <div class="collage-image-card collage-image-2-pos">
+              <img src="Resources/sticker2.png" alt="Collage Image 2">
+          </div>
+          <div class="collage-image-card collage-image-3-pos">
+              <img src="Resources/sticker3.png" alt="Collage Image 3">
+          </div>
+          <div class="collage-image-card collage-image-4-pos">
+              <img src="Resources/sticker4.png" alt="Collage Image 4">
+          </div>
       </div>
     </main>
+  </div>
 
-    <!-- WORD CAROUSEL -->
-    <div class="word-carousel">
-      <div class="word-track">
-        <span>Creative Developer</span>
-        <span class="separator">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
-          </svg>
-        </span>
-        <span>UI/UX Enthusiast</span>
-        <span class="separator">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
-          </svg>
-        </span>
-        <span>Problem Solver</span>
-        <span class="separator">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
-          </svg>
-        </span>
-        <span>Creative Developer</span>
-        <span class="separator">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
-          </svg>
-        </span>
-        <span>UI/UX Enthusiast</span>
-        <span class="separator">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
-          </svg>
-        </span>
-        <span>Problem Solver</span>
-        <span class="separator">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-            <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
-          </svg>
-        </span>
-      </div>
+  <!-- WORD CAROUSEL -->
+  <div class="word-carousel">
+    <div class="word-track">
+      <span>Creative Developer</span>
+      <span class="separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
+        </svg>
+      </span>
+      <span>UI/UX Enthusiast</span>
+      <span class="separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
+        </svg>
+      </span>
+      <span>Problem Solver</span>
+      <span class="separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
+        </svg>
+      </span>
+      <span>Creative Developer</span>
+      <span class="separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
+        </svg>
+      </span>
+      <span>UI/UX Enthusiast</span>
+      <span class="separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
+        </svg>
+      </span>
+      <span>Problem Solver</span>
+      <span class="separator">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+          <path d="M8 0L9 4h4l-3 2.5L11 10l-3-2-3 2 1-3.5L3 4h4z"/>
+        </svg>
+      </span>
     </div>
   </div>
 
@@ -152,7 +179,7 @@
   </div>
 
   <!-- GRID SECTION -->
-  <section class="grid-section">
+  <section class="grid-section" id="about">
     <div class="parent">
       <!-- EDUCATION TIMELINE -->
       <div class="education">
@@ -304,15 +331,25 @@
             </div>
           </div>
         </div>
+        <div class="badges-scrollbar">
+            <div class="badges-scrollbar-thumb"></div>
+          </div>
       </div>
 
       <!-- ACHIEVEMENTS -->
       <div class="achievements">
         <h3 class="section-subtitle reveal-target">ACHIEVEMENTS</h3>
-        <div class="achievement-display reveal-target" id="achievement-display">
-          🤵 SIT Department Secretary, 2024-2025
+
+        <div class="achievement-tags reveal-target">
+          <div class="achievement-card pastel-1">🤵 SIT Department Secretary, 2024-2025</div>
+          <div class="achievement-card pastel-2">🏅 3rd Place, SIT WEEK 2024 Speed Programming Competition</div>
+          <div class="achievement-card pastel-3">🏅 Best in C++ Programming, Academic Excellence Award (PARANGAL 2024)</div>
+          <div class="achievement-card pastel-4">🧠 7th Place, National iSITE Quiz Bee</div>
+          <div class="achievement-card pastel-5">🏅 3rd Place, SIT WEEK 2025 Speed Programming Competition</div>
+          <div class="achievement-card pastel-6">🎨 Champion, SIT WEEK 2025 Graphic Design Competition</div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -320,230 +357,388 @@
   <section class="skills-section" id="skills">
     <div class="skills-container">
       <h2 class="black-title reveal-target">TECH STACKS</h2>
-      <div class="skill-row reveal-target">
-        <h2 class="skill-title">Softwares</h2>
-        <div class="skill-icons">
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/figma.svg" alt="Figma" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/canva/canva-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/canva.svg" alt="Canva" class="skill-icon" loading="lazy">
-          </picture>
+
+      <!-- SOFTWARES -->
+      <div class="skill-group">
+        <div class="techstack-content">
+            <div class="sticky-title">Softwares</div>
+        </div>
+        <div class="techstack-list softwares-list">
+            <div class="skill-right softwares">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/canva/canva-original.svg" alt="Canva" class="skill-icon" loading="lazy">
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma" class="skill-icon" loading="lazy">
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="skill-icon" loading="lazy">
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.simpleicons.org/openai" alt="ChatGPT / OpenAI" class="skill-icon" loading="lazy">
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon" loading="lazy">
+                </div>
+                <div class="skill-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg" alt="Microsoft Excel" class="skill-icon" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- SKILLS & LANGUAGES -->
+      <div class="skill-group">
+        <div class="techstack-content">
+          <div class="sticky-title">Skills & Languages</div>
+        </div>
+        <div class="techstack-list">
+          <div class="skill-right">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" alt="HTML" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">HTML/CSS</h3>
+                  <span class="progress-label">80%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:80%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">JavaScript</h3>
+                  <span class="progress-label">65%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:65%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">Python</h3>
+                  <span class="progress-label">70%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:70%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">C++</h3>
+                  <span class="progress-label">75%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:75%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">C#</h3>
+                  <span class="progress-label">70%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:70%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">SQL</h3>
+                  <span class="progress-label">80%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:80%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/java/java-original.svg" alt="Java" class="skill-icon" loading="lazy">
+              <div class="skill-info">
+                <div class="skill-header">
+                  <h3 class="skill-name">Java</h3>
+                  <span class="progress-label">70%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="width:70%;"></div></div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-      <div class="skill-row reveal-target">
-        <h2 class="skill-title">Skills</h2>
-        <div class="skill-icons">
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/figma.svg" alt="Figma" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/canva/canva-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/canva.svg" alt="Canva" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/html5/html5-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/html5.svg" alt="Web Development" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/mysql/mysql-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/mysql.svg" alt="SQL" class="skill-icon" loading="lazy">
-          </picture>
-        </div>
-      </div>
-      <div class="skill-row reveal-target">
-        <h2 class="skill-title">Programming Languages</h2>
-        <div class="skill-icons">
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/python/python-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/python.svg" alt="Python" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/cplusplus/cplusplus-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/cplusplus.svg" alt="C++" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/csharp/csharp-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/csharp.svg" alt="C#" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/javascript/javascript-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/javascript.svg" alt="JavaScript" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/mysql/mysql-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/mysql.svg" alt="SQL" class="skill-icon" loading="lazy">
-          </picture>
-          <picture>
-            <source src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/java/java-original.svg" type="image/svg+xml">
-            <img src="Resources/icons/java.svg" alt="Java" class="skill-icon" loading="lazy">
-          </picture>
-        </div>
-      </div>
+
     </div>
   </section>
 
   <!-- WORKS OR PROJECTS -->
   <section class="works-section" id="works">
     <h2 class="section-title reveal-target">Works and Projects</h2>
-    <div class="works-grid">
-      <!-- Portfolio -->
-      <div class="work-card reveal-target">
-        <div class="work-media">
-          <img src="Resources/projects/portfolio.gif" alt="Portfolio Screenshot">
+    <div class="bento-grid">
+        <!-- Portfolio -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/portfolio.gif" alt="Portfolio Screenshot" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">Portfolio</h3>
+                <p class="work-description">A personal portfolio website showcasing my projects, skills, and achievements, crafted with a retro aesthetic using HTML, CSS, and JavaScript to highlight my creative and technical expertise.</p>
+                <div class="work-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <a href="https://github.com/httpyavi/portfolio" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" viewBox="0 0 24 24">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69
+                                c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6
+                                1 .07 1.53 1.03 1.53 1.03.87 1.52 2.29 1.08 2.85.82.09-.65.35-1.08.63-1.33
+                                -2.22-.25-4.55-1.11-4.55-4.92 0-1.08.38-1.96 1.01-2.65-.1-.25-.44-1.26.1-2.62
+                                0 0 .83-.27 2.72 1.01A9.47 9.47 0 0 1 12 6.5c.83 0 1.66.11 2.44.34
+                                1.88-1.28 2.72-1.01 2.72-1.01.54 1.36.2 2.37.1 2.62.63.69 
+                                1.01 1.57 1.01 2.65 0 3.82-2.34 4.66-4.56 4.91.36.31.68.92.68 
+                                1.85v2.74c0 .27.16.58.67.5A10 10 0 0 0 22 12 
+                                10 10 0 0 0 12 2z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
         </div>
-        <h3 class="work-title">Portfolio</h3>
-        <p class="work-description">A personal portfolio website showcasing my projects and skills, built with HTML, CSS, and JavaScript in a retro aesthetic.</p>
-        <div class="work-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+        <!-- SIT Website -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/sitwebsite.gif" alt="SIT Website Screenshot" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">SIT Website</h3>
+                <p class="work-description">A custom-built website for the SIT department, featuring dynamic content, responsive design, and interactive elements using HTML, CSS, and JavaScript to enhance user engagement.</p>
+                <div class="work-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <a href="https://httpyavi.github.io/sitweb-via/" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" viewBox="0 0 24 24">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69
+                                c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6
+                                1 .07 1.53 1.03 1.53 1.03.87 1.52 2.29 1.08 2.85.82.09-.65.35-1.08.63-1.33
+                                -2.22-.25-4.55-1.11-4.55-4.92 0-1.08.38-1.96 1.01-2.65-.1-.25-.44-1.26.1-2.62
+                                0 0 .83-.27 2.72 1.01A9.47 9.47 0 0 1 12 6.5c.83 0 1.66.11 2.44.34
+                                1.88-1.28 2.72-1.01 2.72-1.01.54 1.36.2 2.37.1 2.62.63.69 
+                                1.01 1.57 1.01 2.65 0 3.82-2.34 4.66-4.56 4.91.36.31.68.92.68 
+                                1.85v2.74c0 .27.16.58.67.5A10 10 0 0 0 22 12 
+                                10 10 0 0 0 12 2z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
         </div>
-        <a href="https://github.com/yourusername/portfolio" class="work-link">
-          <svg class="github-icon" viewBox="0 0 24 24">
-            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69
-                     c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6
-                     1 .07 1.53 1.03 1.53 1.03.87 1.52 2.29 1.08 2.85.82.09-.65.35-1.08.63-1.33
-                     -2.22-.25-4.55-1.11-4.55-4.92 0-1.08.38-1.96 1.01-2.65-.1-.25-.44-1.26.1-2.62
-                     0 0 .83-.27 2.72 1.01A9.47 9.47 0 0 1 12 6.5c.83 0 1.66.11 2.44.34
-                     1.88-1.28 2.72-1.01 2.72-1.01.54 1.36.2 2.37.1 2.62.63.69 
-                     1.01 1.57 1.01 2.65 0 3.82-2.34 4.66-4.56 4.91.36.31.68.92.68 
-                     1.85v2.74c0 .27.16.58.67.5A10 10 0 0 0 22 12 
-                     10 10 0 0 0 12 2z"/>
-          </svg>
-          View on GitHub
-        </a>
-      </div>
-      <!-- SIT Website -->
-      <div class="work-card reveal-target">
-        <div class="work-media">
-          <img src="Resources/projects/sitwebsite.gif" alt="SIT Website Screenshot">
+        <!-- GOTCHEW -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/gotchew.gif" alt="GOTCHEW Screenshot" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">GOTCHEW</h3>
+                <p class="work-description">A pet e-commerce platform designed for seamless shopping of pet products, featuring a responsive UI, JSON-managed product data, and a user-friendly experience built with HTML, CSS, and JavaScript.</p>
+                <div class="work-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">JSON</span>
+                </div>
+                <a href="https://httpyavi.github.io/gotchew-via/" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" viewBox="0 0 24 24">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69
+                                c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6
+                                1 .07 1.53 1.03 1.53 1.03.87 1.52 2.29 1.08 2.85.82.09-.65.35-1.08.63-1.33
+                                -2.22-.25-4.55-1.11-4.55-4.92 0-1.08.38-1.96 1.01-2.65-.1-.25-.44-1.26.1-2.62
+                                0 0 .83-.27 2.72 1.01A9.47 9.47 0 0 1 12 6.5c.83 0 1.66.11 2.44.34
+                                1.88-1.28 2.72-1.01 2.72-1.01.54 1.36.2 2.37.1 2.62.63.69 
+                                1.01 1.57 1.01 2.65 0 3.82-2.34 4.66-4.56 4.91.36.31.68.92.68 
+                                1.85v2.74c0 .27.16.58.67.5A10 10 0 0 0 22 12 
+                                10 10 0 0 0 12 2z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
         </div>
-        <h3 class="work-title">SIT Website</h3>
-        <p class="work-description">My custom version of the SIT website, featuring dynamic content and responsive design using HTML, CSS, and JavaScript.</p>
-        <div class="work-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+        <!-- PULSO -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/pulso.gif" alt="PULSO Designs Mockup" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">PULSO</h3>
+                <p class="work-description">A cardiopulmonary health app designed in Figma, featuring intuitive, user-friendly interfaces to simplify tracking and monitoring of heart and lung health metrics for better wellness.</p>
+                <div class="work-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">HI-FI</span>  
+                </div>
+                <a href="https://www.figma.com/proto/EM2RCnZCSQ6sTJjgJz5hzS/PULSO?node-id=161-1294&t=SY21fF20iZStaNDi-1" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma Logo" width="12" height="12" style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
+                    View on Figma
+                </a>
+            </div>
         </div>
-        <a href="https://httpyavi.github.io/sitweb-via/" class="work-link">
-          <svg class="github-icon" viewBox="0 0 24 24">
-            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69
-                     c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6
-                     1 .07 1.53 1.03 1.53 1.03.87 1.52 2.29 1.08 2.85.82.09-.65.35-1.08.63-1.33
-                     -2.22-.25-4.55-1.11-4.55-4.92 0-1.08.38-1.96 1.01-2.65-.1-.25-.44-1.26.1-2.62
-                     0 0 .83-.27 2.72 1.01A9.47 9.47 0 0 1 12 6.5c.83 0 1.66.11 2.44.34
-                     1.88-1.28 2.72-1.01 2.72-1.01.54 1.36.2 2.37.1 2.62.63.69 
-                     1.01 1.57 1.01 2.65 0 3.82-2.34 4.66-4.56 4.91.36.31.68.92.68 
-                     1.85v2.74c0 .27.16.58.67.5A10 10 0 0 0 22 12 
-                     10 10 0 0 0 12 2z"/>
-          </svg>
-          View on GitHub
-        </a>
-      </div>
-      <!-- GOTCHEW -->
-      <div class="work-card reveal-target">
-        <div class="work-media">
-          <img src="Resources/projects/gotchew.gif" alt="GOTCHEW Screenshot">
+        <!-- ASCEND -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/ascend.gif" alt="ASCEND Designs Mockup" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">ASCEND</h3>
+                <p class="work-description">DWCC’s study and campus exploration app, designed in Figma with a seamless, user-friendly UI/UX to provide easy access to campus resources and intuitive navigation.</p>
+                <div class="work-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">HI-FI</span>
+                </div>
+                <a href="https://www.figma.com/proto/JqGkPP5OjMCn99vVw68YKt/ASCEND_Celis-DelMundo?node-id=0-1&t=F6FrMD6HYobYzZAx-1" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma Logo" width="12" height="12" style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
+                    View on Figma
+                </a>
+            </div>
         </div>
-        <h3 class="work-title">GOTCHEW</h3>
-        <p class="work-description">A pet e-commerce platform for pet products, featuring a responsive UI and product data managed with JSON, built with HTML, CSS, and JavaScript.</p>
-        <div class="work-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">JSON</span>
+        <!-- VISION -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/vision.gif" alt="VISION Designs Mockup" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">VISION</h3>
+                <p class="work-description">DWCC’s augmented reality campus navigator, crafted in Figma to deliver immersive, user-friendly routes and interactive campus exploration for students.</p>
+                <div class="work-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">HI-FI</span>
+                </div>
+                <a href="https://www.figma.com/proto/bLn3nxVQaAV7poicIOCZ9k/VISION_Celis--DelMundo--Magallanes?t=SY21fF20iZStaNDi-1" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma Logo" width="12" height="12" style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
+                    View on Figma
+                </a>
+            </div>
         </div>
-        <a href="https://httpyavi.github.io/gotchew-via/" class="work-link">
-          <svg class="github-icon" viewBox="0 0 24 24">
-            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69
-                     c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6
-                     1 .07 1.53 1.03 1.53 1.03.87 1.52 2.29 1.08 2.85.82.09-.65.35-1.08.63-1.33
-                     -2.22-.25-4.55-1.11-4.55-4.92 0-1.08.38-1.96 1.01-2.65-.1-.25-.44-1.26.1-2.62
-                     0 0 .83-.27 2.72 1.01A9.47 9.47 0 0 1 12 6.5c.83 0 1.66.11 2.44.34
-                     1.88-1.28 2.72-1.01 2.72-1.01.54 1.36.2 2.37.1 2.62.63.69 
-                     1.01 1.57 1.01 2.65 0 3.82-2.34 4.66-4.56 4.91.36.31.68.92.68 
-                     1.85v2.74c0 .27.16.58.67.5A10 10 0 0 0 22 12 
-                     10 10 0 0 0 12 2z"/>
-          </svg>
-          View on GitHub
-        </a>
-      </div>
-      <!-- Figma Designs -->
-      <div class="work-card reveal-target">
-        <div class="work-media">
-          <img src="Resources/projects/pulso.gif" alt="PULSO Designs Mockup">
+        <!-- HOPPER -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/hopper.gif" alt="HOPPER Designs Mockup" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">HOPPER</h3>
+                <p class="work-description">A travel app prototype designed in Figma, offering a smooth, visually intuitive interface for users to browse and book flights, hotels, and destinations effortlessly.</p>
+                <div class="work-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">HI-FI</span>
+                </div>
+                <a href="https://www.figma.com/proto/dagojmTwkpLAKbBuABGo0e/midtermCelis?node-id=0-1&t=0mdLIkiXjnBgVHfn-1" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma Logo" width="12" height="12" style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
+                    View on Figma
+                </a>
+            </div>
         </div>
-        <h3 class="work-title">PULSO</h3>
-        <p class="work-description">A cardiopulmonary health app. Designed in Figma with user-friendly interfaces that simplify tracking and monitoring of heart and lung health.</p>
-        <div class="work-tags">
-          <span class="tag">Figma</span>
-          <span class="tag">UI/UX</span>
-          <span class="tag">HI-FI</span>  
+        <!-- ZENZONE -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/zenzone.gif" alt="ZENZONE Designs Mockup" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">ZENZONE</h3>
+                <p class="work-description">A mental health website prototype designed in Figma, featuring user-friendly navigation, calming visuals, and accessible resources for self-care and support.</p>
+                <div class="work-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">HI-FI</span>
+                </div>
+                <a href="https://www.figma.com/proto/iSA9YQKTnBMXXlf8j8zV8A/prefinalcelis?node-id=0-1&t=pttM175Y1FhPg0sS-1" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma Logo" width="12" height="12" style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
+                    View on Figma
+                </a>
+            </div>
         </div>
-        <a href="https://www.figma.com/proto/EM2RCnZCSQ6sTJjgJz5hzS/PULSO?node-id=161-1294&t=SY21fF20iZStaNDi-1"
-          class="work-link"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg"
-              alt="Figma Logo"
-              width="12"
-              height="12"
-              style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
-          View on Figma
-        </a>
-      </div>
+        <!-- DIVINE EATS -->
+        <div class="work-card reveal-target">
+            <div class="work-media">
+                <img src="Resources/projects/divineeats.gif" alt="DIVINE EATS Designs Mockup" loading="lazy">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">DIVINE EATS</h3>
+                <p class="work-description">A food delivery app prototype for DWCC Canteen, designed in Figma with a seamless interface for browsing menus, placing orders, and managing deliveries with ease.</p>
+                <div class="work-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">HI-FI</span>
+                </div>
+                <a href="https://www.figma.com/proto/XC4smL5hXSSUmWtVC5Gout/celis_midterm?node-id=0-1&t=dxBay2PVK95RqNxh-1" class="work-link" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg" alt="Figma Logo" width="12" height="12" style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
+                    View on Figma
+                </a>
+            </div>
+        </div>
+        <!-- IT Congress -->
+        <div class="work-card reveal-target">
+          <div class="work-media">
+              <img src="Resources/projects/6itcongress.png" alt="6TH IT Congress" loading="lazy">
+          </div>
+          <div class="work-content">
+              <h3 class="work-title">6th IT Congress Publication Materials</h3>
+              <p class="work-description">
+                  Designed official publication materials for the 6th IT Congress, including posters, social media graphics, and digital banners, ensuring a consistent and professional visual identity.
+              </p>
+              <div class="work-tags">
+                  <span class="tag">Canva</span>
+                  <span class="tag">Figma</span>
+                  <span class="tag">Graphic Design</span>
+              </div>
+          </div>
+        </div>
 
-      <div class="work-card reveal-target">
-        <div class="work-media">
-          <img src="Resources/projects/ascend.gif" alt="Figma Designs Mockup">
+        <!-- Pubmats -->
+        <div class="work-card reveal-target">
+          <div class="work-media">
+              <img src="Resources/projects/itpubmats.png" alt="Pubmats" loading="lazy">
+          </div>
+          <div class="work-content">
+              <h3 class="work-title">SIT Facebook Publication Materials</h3>
+              <p class="work-description">
+                  Created engaging social media graphics for the SIT Facebook page to promote events and updates, focusing on clear messaging and visually appealing designs.
+              </p>
+              <div class="work-tags">
+                  <span class="tag">Canva</span>
+                  <span class="tag">Figma</span>
+                  <span class="tag">Graphic Design</span>
+              </div>
+          </div>
         </div>
-        <h3 class="work-title">ASCEND</h3>
-        <p class="work-description">DWCC’s study and campus exploration app, offering seamless access to campus resources and navigation through user-friendly UI/UX design.</p>
-        <div class="work-tags">
-          <span class="tag">Figma</span>
-          <span class="tag">UI/UX</span>
-          <span class="tag">HI-FI</span>
-        </div>
-        <a href="https://www.figma.com/proto/JqGkPP5OjMCn99vVw68YKt/ASCEND_Celis-DelMundo?node-id=0-1&t=F6FrMD6HYobYzZAx-1" class="work-link"class="work-link"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg"
-              alt="Figma Logo"
-              width="12"
-              height="12"
-              style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
-          View on Figma
-        </a>
-      </div>
 
-      <div class="work-card reveal-target">
-        <div class="work-media">
-          <img src="Resources/projects/vision.gif" alt="Figma Designs Mockup">
+        <!-- Logos -->
+        <div class="work-card reveal-target">
+          <div class="work-media">
+              <img src="Resources/projects/logo.png" alt="Logos" loading="lazy">
+          </div>
+          <div class="work-content">
+              <h3 class="work-title">JPCS-DWCC Logos for Webinars</h3>
+              <p class="work-description">
+                  Designed a series of logos for JPCS-DWCC webinars, aiming for versatility and clarity across digital platforms while maintaining brand consistency.
+              </p>
+              <div class="work-tags">
+                  <span class="tag">Figma</span>
+                  <span class="tag">Logo</span>
+                  <span class="tag">Graphic Design</span>
+              </div>
+          </div>
         </div>
-        <h3 class="work-title">VISION</h3>
-        <p class="work-description">DWCC’s augmented reality campus navigator, providing students with immersive, easy-to-follow routes and interactive campus exploration.</p>
-        <div class="work-tags">
-          <span class="tag">Figma</span>
-          <span class="tag">UI/UX</span>
-          <span class="tag">HI-FI</span>
-        </div>
-        <a href="https://www.figma.com/proto/bLn3nxVQaAV7poicIOCZ9k/VISION_Celis--DelMundo--Magallanes?t=SY21fF20iZStaNDi-1" class="work-link"class="work-link"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src="https://cdn.jsdelivr.net/npm/devicon@latest/icons/figma/figma-original.svg"
-              alt="Figma Logo"
-              width="12"
-              height="12"
-              style="filter: grayscale(100%) brightness(0); vertical-align: middle;">
-          View on Figma
-        </a>
-      </div>
     </div>
-  </section>
+</section>
 
   <!-- CONTACT SECTION -->
   <section class="contact-section" id="contact">
@@ -625,16 +820,16 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="main-container">
       <div class="footer-content">
-        <div class="footer-logo">
-          <img src="Resources/Logo.png" alt="Logo" class="logo-img">
-        </div>
-        <p class="footer-text">&copy; 2025 Via Celis. Built with passion and pixels.</p>
+        <p class="footer-text">&copy; 2025 Via Celis. Built with coffee, passion, and pixels.</p>
       </div>
-    </div>
   </footer>
-
+  
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll back to top">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+  
   <script src="script.js"></script>
 </body>
 </html>
