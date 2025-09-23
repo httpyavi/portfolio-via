@@ -1,8 +1,11 @@
 # My Portfolio
 
-## About This Portfolio
+## About
 This is my personal portfolio, a place where I showcase my projects, skills, and professional journey.  
 The goal of this website is to provide a comprehensive overview of my abilities as a developer and to highlight the work I'm most proud of.
+
+<img width="1897" height="970" alt="image" src="https://github.com/user-attachments/assets/4a0fea40-3ac3-4605-b826-8e6b1f9011ed" />
+See the portfolio live: **https://httpyavi.github.io/portfolio-via/**
 
 ## Features
 - **Clean and Intuitive Design:** Easy to navigate, with a simple and clear layout.  
@@ -12,7 +15,7 @@ The goal of this website is to provide a comprehensive overview of my abilities 
 
 ## Technologies Used
 - HTML5  
-- CSS3  
+- CSS
 - JavaScript  
 
 ## Getting Started
