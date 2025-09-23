@@ -1,157 +1,125 @@
 document.addEventListener("DOMContentLoaded", () => {
-const roles = [
-  "an Ambitious IT Student",
-  "a Passionate Designer",
-  "a Visionary Dreamer",
-  "a Frontend Developer",
-  "a Curious Data Analyst"
-];
+  /** -------------------------------
+   * Scroll Reveal Animations
+   ---------------------------------*/
+  const revealTargets = document.querySelectorAll(".reveal-target");
+  const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-active");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  revealTargets.forEach(target => observer.observe(target));
 
-const achievements = [
-  "🤵 SIT Department Secretary, 2024-2025",
-  "🏅 3rd Place, SIT WEEK 2024 Speed Programming Competition",
-  "🌟 Best in C++ Programming, Academic Excellence Award (PARANGAL 2024)",
-  "🧠 7th Place, National iSITE Quiz Bee",
-  "🏅 3rd Place, SIT WEEK 2025 Speed Programming Competition",
-  "🎨 Champion, SIT WEEK 2025 Graphic Design Competition"
-];
+  /** -------------------------------
+   * Navigation Active State
+   ---------------------------------*/
+  const sections = document.querySelectorAll("section[id], main[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const navHeight = 80;
 
-const roleElement = document.getElementById("role");
-const achievementElement = document.getElementById("achievement-display");
+  function updateNavActive() {
+    let currentSection = "";
+    let minDistance = Infinity;
 
-if (!roleElement || !achievementElement) {
-  console.error("Role or Achievement element not found");
-  return;
-}
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - navHeight;
+      const sectionHeight = section.offsetHeight;
+      const sectionBottom = sectionTop + sectionHeight + 200;
+      const sectionMidpoint = sectionTop + sectionHeight / 2;
+      const viewportMidpoint = window.scrollY + window.innerHeight / 2;
+      const distance = Math.abs(viewportMidpoint - sectionMidpoint);
 
-/**
- * Generic updater for text with flip/fade animations
- * @param {HTMLElement} element - target element
- * @param {string[]} items - array of strings
- * @param {string} outClass - class for "out" animation
- * @param {string} inClass - class for "in" animation
- * @param {number} interval - time between changes in ms
- */
-function createTextCarousel(element, items, outClass, inClass, interval) {
-  let index = 0;
-
-  const update = async () => {
-    element.classList.add(outClass);
-    await new Promise(resolve => setTimeout(resolve, 500)); // matches CSS transition
-
-    element.textContent = items[index];
-    element.classList.remove(outClass);
-    element.classList.add(inClass);
-    await new Promise(resolve => setTimeout(resolve, 500));
-
-    element.classList.remove(inClass);
-    index = (index + 1) % items.length;
-  };
-
-  update(); // initial call
-  return setInterval(update, interval);
-}
-
-// Start the carousels
-createTextCarousel(roleElement, roles, "flip-out", "flip-in", 3000);
-createTextCarousel(achievementElement, achievements, "fade-out", "fade-in", 3000);
-
-// Scroll-driven reveal animations
-const revealTargets = document.querySelectorAll('.reveal-target');
-
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('reveal-active');
-    } else {
-      entry.target.classList.remove('reveal-active'); // Remove class when out of view
-    }
-  });
-}, observerOptions);
-
-revealTargets.forEach(target => {
-  observer.observe(target);
-});
-
-// Navigation active state on scroll
-const sections = document.querySelectorAll('section[id], main[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-// Debug: Log sections to ensure Works is included
-sections.forEach(section => {
-  console.log(`Observing section: ${section.getAttribute('id')}`);
-});
-
-const navObserverOptions = {
-  root: null,
-  threshold: [0.1, 0.3, 0.5], // Multiple thresholds for better detection
-  rootMargin: '-80px 0px -40% 0px' // Adjusted for fixed header and section height
-};
-
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const sectionId = entry.target.getAttribute('id');
-      console.log(`Section in view: ${sectionId}`); // Debug: Log visible section
-      navLinks.forEach(link => {
-        link.classList.remove('nav-link-active');
-        if (link.getAttribute('href') === `#${sectionId}`) {
-          link.classList.add('nav-link-active');
+      if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        if (distance < minDistance) {
+          minDistance = distance;
+          currentSection = section.getAttribute("id");
         }
-      });
+      }
+    });
+
+    if (window.scrollY < (sections[0]?.offsetTop || 0) - navHeight + 50) {
+      currentSection = "home";
     }
-  });
-}, navObserverOptions);
 
-sections.forEach(section => {
-  navObserver.observe(section);
-});
-
-// Fallback: Highlight Home on page load or if at top
-window.addEventListener('scroll', () => {
-  if (window.scrollY < 100) {
     navLinks.forEach(link => {
-      link.classList.remove('nav-link-active');
-      if (link.getAttribute('href') === '#home') {
-        link.classList.add('nav-link-active');
+      link.classList.remove("nav-link-active");
+      if (link.getAttribute("href") === `#${currentSection}`) {
+        link.classList.add("nav-link-active");
       }
     });
   }
-});
 
-const menuButton = document.getElementById('menu-button');
-const navPill = document.querySelector('.nav-pill');
+  updateNavActive();
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateNavActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  window.addEventListener("resize", updateNavActive);
 
-menuButton.addEventListener('click', () => {
-    navPill.classList.toggle('active');
-});
+  /** -------------------------------
+   * Menu Toggle
+   ---------------------------------*/
+  const menuButton = document.getElementById("menu-button");
+  const navPill = document.querySelector(".nav-pill");
+  if (menuButton && navPill) {
+    menuButton.addEventListener("click", () => {
+      const isExpanded = navPill.classList.toggle("active");
+      menuButton.setAttribute("aria-expanded", isExpanded);
+    });
+  }
 
-  // Handle contact form submission
-  const contactForm = document.getElementById('contact-form');
+  /** -------------------------------
+   * Contact Form Mailto
+   ---------------------------------*/
+  const contactForm = document.getElementById("contact-form");
   if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent default form submission
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-      // Construct the custom email body
       const emailBody = `Name: ${name} \nEmail:(${email}) \n\n${message}`;
       const encodedBody = encodeURIComponent(emailBody);
       const mailtoLink = `mailto:viabiancacelis@gmail.com?subject=Contact%20Form%20Submission&body=${encodedBody}`;
 
-      // Open email client
       window.location.href = mailtoLink;
-
-      // Optional: Reset form after submission
       contactForm.reset();
     });
-  } else {
-    console.error("Contact form not found");
+  }
+
+  /** -------------------------------
+   * Badge Card Scroll & Flip
+   ---------------------------------*/
+  const badges = document.querySelector(".badges");
+  if (badges) {
+    const prevNav = document.querySelector(".badge-nav.prev");
+    const nextNav = document.querySelector(".badge-nav.next");
+    if (prevNav) prevNav.addEventListener("click", () => badges.scrollBy({ left: -150, behavior: "smooth" }));
+    if (nextNav) nextNav.addEventListener("click", () => badges.scrollBy({ left: 150, behavior: "smooth" }));
+  }
+
+
+  /** -------------------------------
+   * Scroll-to-Top Button
+   ---------------------------------*/
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (scrollTopBtn) {
+    window.addEventListener("scroll", () => {
+      scrollTopBtn.classList.toggle("show", window.scrollY > 300);
+    });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 });
